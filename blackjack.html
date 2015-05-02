@@ -1,0 +1,66 @@
+<head>
+  <title>Blackjack</title>
+</head>
+
+<body>
+  {{> tablero}}
+</body>
+
+
+
+
+<template name="dealer">
+  <table style="margin: auto;">
+    <thead>
+      <tr><td colspan=5>Dealer</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+      </tr>
+    </tbody>
+  </table>
+</template>
+
+<template name="player">
+  <table>
+    <thead>
+      <tr><td colspan=5>{{name}}</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+      </tr>
+      <tr>
+        <td>Dineros: $money</td>
+        <td>Apuesta: $bet</td>
+        <td></td>
+        <td><input type=button id="hitButton" value="Pedir" onclick="hit()" disabled></td>
+        <td><input type=button id="standButton" value="Quedar" onclick="stand()" disabled></td>
+      </tr>
+    </tbody>
+  </table>
+</template>
+
+<template class="background" name="tablero">
+  <table style="width: 1200px; height:300px;" align=center cellpadding=0 cellspacing=10 border=0;>
+
+    <thead>
+      <tr><td colspan=2>{{> dealer}}</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{> player name="Luis"}}</td>
+        <td>{{> player name="Alvaro"}}</td>
+      </tr>
+    </tbody>
+  </table>
+</template>
