@@ -1,10 +1,23 @@
-.background {
-	background: url(table.png);
-  background-attachment: scroll;
-  background-position: center center;
-  background-repeat: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#background {
+    background: #000000 url(table.png) no-repeat bottom left;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    height: auto !important;
+    min-height:100%;
+}
+.card-border{
+	width: 5.188em; 
+	height: 7.938em; 
+	border: 0.125em solid #FFFFFF;
+}
+.board{
+	width: 75em; 
+	height: 18.75em; 
+	padding-top: 3.125em;
 }
