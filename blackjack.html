@@ -3,7 +3,9 @@
 </head>
 
 <body>
-  {{> tablero}}
+	<div id="background">
+		{{> tablero}}
+	</div>
 </body>
 
 
@@ -16,11 +18,10 @@
     </thead>
     <tbody>
       <tr>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td class = "card-border"></td>
+        <td class = "card-border"></td>
+        <td class = "card-border"></td>
+        <td class = "card-border"></td>
       </tr>
     </tbody>
   </table>
@@ -33,11 +34,11 @@
     </thead>
     <tbody>
       <tr>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
-        <td style="width: 83px; height: 127px; border: 2px solid #660; background-color: #660"></td>
+        <td class = "card-border"></td>
+        <td class = "card-border"></td>
+        <td class = "card-border"></td>
+        <td class = "card-border"></td>
+        <td class = "card-border"></td>
       </tr>
       <tr>
         <td>Dineros: $money</td>
@@ -50,8 +51,8 @@
   </table>
 </template>
 
-<template class="background" name="tablero">
-  <table style="width: 1200px; height:300px;" align=center cellpadding=0 cellspacing=10 border=0;>
+<template name="tablero">
+  <table class="board" align=center cellpadding=0 cellspacing=10 border=0;>
 
     <thead>
       <tr><td colspan=2>{{> dealer}}</td></tr>
