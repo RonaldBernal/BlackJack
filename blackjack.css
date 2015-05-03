@@ -26,6 +26,13 @@ html, body {
   padding-left: 6rem;
 }
 
-.hidden {
-  visibility: hidden;
+.nospace{
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+.space{
+    padding-top: 2rem !important;
+}
+.white-text{
+    color: #FFFFFF
 }
