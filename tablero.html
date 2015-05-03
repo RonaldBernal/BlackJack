@@ -1,14 +1,23 @@
 <template name="tablero">
-  <table class="board" align=center cellpadding=0 cellspacing=10 border=0;>
-
-    <thead>
-      <tr><td colspan=2>{{> dealer}}</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{> player name="Luis"}}</td>
-        <td>{{> player name="Alvaro"}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="ui grid">
+    <div class="three column centered row">
+      <div class="column">
+        {{> dealer}}
+      </div>
+    </div>
+    <div class="three column row"></div>
+    <div class="three column row"></div>
+    <div class="three column row"></div>
+    <div class="three column row"></div>
+    <div class="three column row"></div>
+    <div class="three column row">
+      <div class="column">
+        {{> player name="Luis"}}
+      </div>
+      <div class="column"></div>
+      <div class="column">
+        {{> player name="Alvaro"}}
+      </div>
+    </div>
+  </div>
 </template>

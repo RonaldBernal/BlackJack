@@ -1,23 +1,35 @@
 <template name="player">
-  <table>
-    <thead>
-      <tr><td colspan=5>{{name}}</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class = "card-border"></td>
-        <td class = "card-border"></td>
-        <td class = "card-border"></td>
-        <td class = "card-border"></td>
-        <td class = "card-border"></td>
-      </tr>
-      <tr>
-        <td>Dineros: $money</td>
-        <td>Apuesta: $bet</td>
-        <td></td>
-        <td><input type=button id="hit" value="Pedir"></td>
-        <td><input type=button id="standButton" value="Quedar" onclick="stand()" disabled></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="ui grid">
+    <div class="two column row">
+      <div class="column">
+        {{name}}
+      </div>
+    </div>
+    <div class="five column row">
+      <div class="column card-border">
+      </div>
+      <div class="column card-border">
+      </div>
+      <div class="column card-border">
+      </div>
+      <div class="column card-border">
+      </div>
+      <div class="column card-border">
+      </div>
+    </div>
+    <div class="five column centered row">
+      <div class="column">
+        Dineros: $money
+      </div>
+      <div class="column">
+        Apuesta: $bet
+      </div>
+      <div class="column">
+        <input type=button id="hitButton" value="Pedir" onclick="hit()" disabled>
+      </div>
+      <div class="column">
+        <input type=button id="standButton" value="Quedar" onclick="stand()" disabled>
+      </div>
+    </div>
+  </div>
 </template>
