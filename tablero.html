@@ -1,5 +1,5 @@
 <template name="tablero">
-  <div class="ui grid">
+  <div class="ui middle center aligned grid">
     <div class="three column centered row">
       <div class="column">
         {{> dealer}}
@@ -12,11 +12,13 @@
     <div class="three column row"></div>
     <div class="three column row">
       <div class="column">
-        {{> player name="Luis"}}
+        {{> player name="Player 1" player=player1}}
       </div>
-      <div class="column"></div>
       <div class="column">
-        {{> player name="Alvaro"}}
+        <input type=button id="nuevoJuego" value="Nuevo Juego">
+      </div>
+      <div class="column">
+        {{> player name="Player 2" player=player2}}
       </div>
     </div>
   </div>

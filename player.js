@@ -1,6 +1,5 @@
 var Player = new function(){
   this.hand = [];
-  this.hand.push(deck.shift(), deck.shift());
 }
 
 if (Meteor.isClient) {

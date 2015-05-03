@@ -28,8 +28,7 @@ Deck.prototype.shift = function() {
   return this.cards.shift();
 }
 
-deck = new Deck();
-
+deck    = new Deck();
 
 if (Meteor.isClient) {
   // counter starts at 0
