@@ -12,16 +12,20 @@ html, body {
     min-height:100%;
 }
 .board{
-	width: 75em; 
-	height: 18.75em; 
+	width: 75em;
+	height: 18.75em;
 	padding-top: 3.125em;
 }
 .card-border{
-	width: 5.188em; 
-	height: 7.938em; 
+	width: 5.188em;
+	height: 7.938em;
 	border: 0.125em solid #FFFFFF;
 }
 .container {
   padding-right: 6rem;
   padding-left: 6rem;
+}
+
+.hidden {
+  visibility: hidden;
 }

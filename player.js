@@ -1,12 +1,27 @@
+var Player = new function(){
+  this.hand = [];
+  this.hand.push(deck.shift(), deck.shift());
+}
+
 if (Meteor.isClient) {
 
   Template.player.helpers({
-
+    cardOne: function(){
+      console.log(Player.hand);
+      return Player.hand[0].value;
+    }
   });
 
   Template.player.events({
     "click #hit": function (event) {
-      console.log(this.name);
+
+      if(Player.hand.length < 5){
+
+        deck.shuffle();
+
+        Player.hand[Player.hand.length] = deck.shift();
+        console.log(Player.hand);
+      }
 
       // Prevent default form submit
       return false;

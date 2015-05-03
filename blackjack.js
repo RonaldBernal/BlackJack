@@ -1,5 +1,34 @@
-var deck = [];
+function Deck(){
+  this.cards = [];
+}
 
+card = function (value, suit) {
+    this.value = value;
+    this.suit  = suit;
+}
+
+Deck.prototype.shuffle = function() {
+  var currentIndex = this.cards.length, temporaryValue, randomIndex ;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = this.cards[currentIndex];
+    this.cards[currentIndex] = this.cards[randomIndex];
+    this.cards[randomIndex] = temporaryValue;
+  }
+};
+
+Deck.prototype.shift = function() {
+  return this.cards.shift();
+}
+
+deck = new Deck();
 
 
 if (Meteor.isClient) {
@@ -11,16 +40,10 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
-    Deck = new Mongo.Collection("cards");
+    DBDeck = new Mongo.Collection("cards");
 
-    var c = 0;
-    for (var i = 1; i <= 4; i++){
-      for (var j = 1; j <= 13; j++){
-        Deck.insert({
-          value: j,
-          suit:  i
-        });
-      }
-    }
+
+
+
   });
 }
