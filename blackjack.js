@@ -1,31 +1,10 @@
-
 var deck = [];
 
-function Card (value, suit) {
-    this.value = value;
-    this.suit  = suit;
-}
-
-function newDeck () {
-  Deck.find({}, {sort: {createdAt: -1}}).forEach(function(card){
-    console.log(card.value);
-  });
-}
 
 
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
-
-  Template.tablero.helpers({
-    newDeck: function(){
-      // Insertar a arreglo y hacer suffle
-
-
-
-    },
-
-  });
 
 }
 
